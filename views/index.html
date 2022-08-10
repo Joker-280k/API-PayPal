@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://jsuites.net/v4/jsuites.js"></script>
+    <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+</head>
+
+<br><br>
+<body>
+    <div id="smart-button-container">
+        <div style="text-align: center;">
+            <div id="paypal-button-container"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-md-3">
+            <h4>FECHAS DESDE...</h4>
+            <input type="date" class="form-control" id="datefilterfrom" data-date-split-input="true">
+        </div>
+        <div class="col-md-3">
+            <h4>FECHAS HASTA...</h4>
+          <input type="date" class="form-control" id="datefilterto" data-date-split-input="true">
+          <br><br>
+          <a class="waves-effect waves-light btn-large" id="boton">Filtrar por rango de fechas</a>
+        </div>
+        </div>
+<br><br>
+    <table class="container" class="black-text" id="testTable">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Paypal_order_ID</th>
+                <th>paypal_payer_id</th>
+                <th>paypal_payer_email</th>
+                <th>paypal_country_code</th>
+                <th>paypal_amount</th>
+                <th>paypal_currency</th>
+                <th>status</th>
+                <th>created_date</th>
+            </tr>
+        </thead>
+        <tbody id="idBody" style="border: none;">
+        </tbody>
+    </table>
+    
+    <script src="https://www.paypal.com/sdk/js?client-id=AQ2b9S7jde44LWYiL2AHcPIZl5PthO3vlnqUyOaCErdkDxq-11Qlgh67s3i9SLM8d4XGqb23RzjtP7kh&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
+    <script src="../scripts/index.js"></script>
+</body>
+</html>
